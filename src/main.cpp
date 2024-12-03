@@ -24,6 +24,7 @@
 #include "inputplugin.h"
 #include "qwaylandinputpanelshellintegration_p.h"
 #include "qwaylandinputpanelsurface_p.h"
+#include "qtKeyToXkb.h"
 
 Q_GLOBAL_STATIC(InputMethod, s_im)
 
@@ -58,11 +59,6 @@ public:
 
     void setEngine(QVirtualKeyboardInputEngine *engine) {
         QObject::connect(engine, &QVirtualKeyboardInputEngine::virtualKeyClicked, this, [this] (Qt::Key key, const QString &text, Qt::KeyboardModifiers modifiers, bool isAutoRepeat) {
-            static const QHash<Qt::Key, xkb_keysym_t> qtKeyToXkb = {
-                { Qt::Key_Return, XKB_KEY_Return },
-                { Qt::Key_Space, XKB_KEY_space },
-                { Qt::Key_Tab, XKB_KEY_Tab },
-            };
 
             auto it = qtKeyToXkb.constFind(key);
             if (it != qtKeyToXkb.constEnd()) {

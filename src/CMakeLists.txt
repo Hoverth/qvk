@@ -4,7 +4,7 @@ ecm_add_qtwayland_client_protocol(qvk PROTOCOL ${WaylandProtocols_DATADIR}/unsta
 ecm_add_qtwayland_client_protocol(qvk PROTOCOL ${WaylandProtocols_DATADIR}/unstable/text-input/text-input-unstable-v1.xml BASENAME text-input-unstable-v1)
 ecm_add_qtwayland_client_protocol(qvk PROTOCOL "${Wayland_DATADIR}/wayland.xml" BASENAME wayland)
 
-target_sources(qvk PRIVATE main.cpp inputmethod.cpp inputplugin.cpp qwaylandinputpanelshellintegration.cpp qwaylandinputpanelsurface.cpp)
+target_sources(qvk PRIVATE main.cpp qtKeyToXkb.cpp inputmethod.cpp inputplugin.cpp qwaylandinputpanelshellintegration.cpp qwaylandinputpanelsurface.cpp)
 
 ecm_add_qml_module(qvk URI "org.kde.qvk" GENERATE_PLUGIN_SOURCE)
 ecm_target_qml_sources(qvk SOURCES qml/main.qml)
