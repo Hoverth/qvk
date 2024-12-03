@@ -169,7 +169,7 @@ public:
     }
     void inputMethodEvent(QInputMethodEvent *event) override
     {
-        for (auto x : event->attributes()) {
+        /*for (auto x : event->attributes()) {
             if (x.type == QInputMethodEvent::TextFormat) {
                 m_input.setPreEditStyle(x.start, x.length, x.value.value<QTextFormat>().type());
             }
@@ -179,7 +179,7 @@ public:
         // m_input.setPreEditCursor(event->curso);
         if (const auto commit = event->commitString(); !commit.isEmpty()) {
             m_input.commit(commit);
-        }
+        }*/
     }
 
 private:
