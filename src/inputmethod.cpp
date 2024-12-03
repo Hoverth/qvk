@@ -143,7 +143,8 @@ void Keyboard::keyboard_keymap(uint32_t format, int32_t fd, uint32_t size)
 
 void Keyboard::keyboard_key(uint32_t serial, uint32_t time, uint32_t key, uint32_t state)
 {
-    auto code = key + 8; // map to wl_keyboard::keymap_format::keymap_format_xkb_v1
+    //auto code = key + 8; // map to wl_keyboard::keymap_format::keymap_format_xkb_v1
+    auto code = key;
 
     xkb_keysym_t sym = xkb_state_key_get_one_sym(mXkbState.get(), code);
 
