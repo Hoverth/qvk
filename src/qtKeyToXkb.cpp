@@ -9,6 +9,18 @@
 
 #include "qtKeyToXkb.h"
 
+// TODO
+//
+// Broken chars: (got <- expected/name)
+// À <- `/backtick
+// Â <- stirling/pound
+// <- euro
+// <- sqrt
+// { <- center period
+// <- left quotes
+// <- right quotes
+// <- trademarked
+
 const QHash<Qt::Key, xkb_keysym_t> qtKeyToXkb = {
     // Qt Keycodes to Xkb Keycodes
     //
