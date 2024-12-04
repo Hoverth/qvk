@@ -214,6 +214,8 @@ static bool initPanelIntegration(QWindow *window)
 int main(int argc, char **argv)
 {
     qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
+    qputenv("QT_VIRTUALKEYBOARD_LAYOUT_PATH", "qrc:/qt/qml/org/kde/qvk/layouts/");
+
     qputenv("QT_WAYLAND_INPUT_PANEL_TOPLEVEL", QByteArray("1"));
     QGuiApplication application(argc, argv);
 

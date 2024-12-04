@@ -11,7 +11,7 @@ import QtQuick.VirtualKeyboard.Settings
 Window {
     width: Screen.width / 3
     height: Screen.width / 2 > inputPanel.implicitHeight > 0 ? inputPanel.implicitHeight : 100
-    color: Qt.transparent
+    //color: Qt.transparent
 
     InputThing {
         id: thing
@@ -24,8 +24,10 @@ Window {
         anchors.fill: parent
         focusPolicy: Qt.NoFocus
         Component.onCompleted: {
-            VirtualKeyboardSettings.styleName = "retro"
-            VirtualKeyboardSettings.visibleFunctionKeys = QtVirtualKeyboard.KeyboardFunctionKeys.All // this is the language key, etc. NOT modifier keys ctrl, alt, etc.
+            // VirtualKeyboardSettings.styleName = "retro"
+            VirtualKeyboardSettings.visibleFunctionKeys = QtVirtualKeyboard.KeyboardFunctionKeys.All
+            // this is the language key, etc. NOT modifier keys ctrl, alt, etc.
+            VirtualKeyboardSettings.inputMethodHints = Qt.ImhNoPredictiveText
         }
     }
 }

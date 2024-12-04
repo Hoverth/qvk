@@ -7,7 +7,8 @@ ecm_add_qtwayland_client_protocol(qvk PROTOCOL "${Wayland_DATADIR}/wayland.xml" 
 target_sources(qvk PRIVATE main.cpp qtKeyToXkb.cpp inputmethod.cpp inputplugin.cpp qwaylandinputpanelshellintegration.cpp qwaylandinputpanelsurface.cpp)
 
 ecm_add_qml_module(qvk URI "org.kde.qvk" GENERATE_PLUGIN_SOURCE)
-ecm_target_qml_sources(qvk SOURCES qml/main.qml)
+ecm_target_qml_sources(qvk SOURCES qml/main.qml )
+ecm_target_qml_sources(qvk SOURCES layouts/en_GB/main.qml PATH layouts/en_GB)
 ecm_finalize_qml_module(qvk)
 
 target_link_libraries(qvk PRIVATE KF6::CoreAddons KF6::I18n Qt::Gui Qt::GuiPrivate Qt::VirtualKeyboard Qt::WaylandClient Qt::WaylandClientPrivate Wayland::Client)
