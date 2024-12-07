@@ -13,6 +13,68 @@ KeyboardLayout {
 
     KeyboardRow {
         Key {
+            key: Qt.Key_QuoteLeft
+            text: "`"
+        }
+        Key {
+            key: Qt.Key_1
+            text: "1"
+        }
+        Key {
+            key: Qt.Key_2
+            text: "2"
+        }
+        Key {
+            key: Qt.Key_3
+            text: "3"
+        }
+        Key {
+            key: Qt.Key_4
+            text: "4"
+        }
+        Key {
+            key: Qt.Key_5
+            text: "5"
+        }
+        Key {
+            key: Qt.Key_6
+            text: "6"
+        }
+        Key {
+            key: Qt.Key_7
+            text: "7"
+        }
+        Key {
+            key: Qt.Key_8
+            text: "8"
+        }
+        Key {
+            key: Qt.Key_9
+            text: "9"
+        }
+        Key {
+            key: Qt.Key_0
+            text: "0"
+        }
+        Key {
+            key: Qt.Key_Minus
+            text: "-"
+        }
+        Key {
+            key: Qt.Key_Equal
+            text: "="
+        }
+        BackspaceKey { // This seems to work fine so we'll keep it
+            weight: functionKeyWidth
+            Layout.fillWidth: false
+        }
+    }
+    KeyboardRow {
+        Key {
+            key: Qt.Key_Tab
+            text: "Tab"
+        }
+        Key {
             key: Qt.Key_Q
             text: "q"
         }
@@ -53,19 +115,27 @@ KeyboardLayout {
             key: Qt.Key_P
             text: "p"
         }
+        Key {
+            key: Qt.Key_BracketLeft
+            text: "["
+        }
+        Key {
+            key: Qt.Key_BracketRight
+            text: "]"
+        }
+        Key {
+            key: Qt.Key_Backslash
+            text: "\\"
+        }
     }
     KeyboardRow {
-        KeyboardRow {
-            Layout.preferredWidth: functionKeyWidth
-            Layout.fillWidth: false
-            FillerKey {
-            }
-            Key {
-                key: Qt.Key_A
-                text: "a"
-                weight: normalKeyWidth
-                Layout.fillWidth: false
-            }
+        Key {
+            key: Qt.Key_CapsLock
+            text: "Caps"
+        }
+        Key {
+            key: Qt.Key_A
+            text: "a"
         }
         Key {
             key: Qt.Key_S
@@ -95,17 +165,21 @@ KeyboardLayout {
             key: Qt.Key_K
             text: "k"
         }
-        KeyboardRow {
-            Layout.preferredWidth: functionKeyWidth
+        Key {
+            key: Qt.Key_L
+            text: "l"
+        }
+        Key {
+            key: Qt.Key_Semicolon
+            text: ";"
+        }
+        Key {
+            key: Qt.Key_Apostrophe
+            text: "'"
+        }
+        EnterKey {
+            weight: functionKeyWidth
             Layout.fillWidth: false
-            Key {
-                key: Qt.Key_L
-                text: "l"
-                weight: normalKeyWidth
-                Layout.fillWidth: false
-            }
-            FillerKey {
-            }
         }
     }
     KeyboardRow {
@@ -145,8 +219,23 @@ KeyboardLayout {
             key: Qt.Key_M
             text: "m"
         }
-        BackspaceKey { // This seems to work fine so we'll keep it
+        Key {
+            key: Qt.Key_Comma
+            text: ","
+        }
+        Key {
+            key: Qt.Key_Period
+            text: "."
+        }
+        Key {
+            key: Qt.Key_Slash
+            text: "/"
+        }
+        Key {
+            key: Qt.Key_Shift
+            text: "Shift"
             weight: functionKeyWidth
+            functionKey: true
             Layout.fillWidth: false
         }
     }
@@ -159,15 +248,25 @@ KeyboardLayout {
             key: Qt.Key_Alt
             text: "Alt"
         }
+        Key {
+            key: Qt.Key_Meta
+            text: "Meta"
+        }
         SpaceKey {
+            weight: 700
+        }
+        Key {
+            key: Qt.Key_AltGr
+            text: "AltGr"
+        }
+        Key {
+            key: Qt.Key_Menu
+            text: "RClick"
         }
         HideKeyboardKey {
             weight: normalKeyWidth
             Layout.fillWidth: false
         }
-        EnterKey {
-            weight: functionKeyWidth
-            Layout.fillWidth: false
-        }
+        
     }
 }
