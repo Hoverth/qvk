@@ -266,6 +266,8 @@ KeyboardLayout {
         HideKeyboardKey {
             weight: normalKeyWidth
             Layout.fillWidth: false
+            // perhaps it would be better if hiding the keyboard then disables it?
+            // `org.kde.kwin.virtualkeyboard.enabled` in dbus
         }
         
     }
